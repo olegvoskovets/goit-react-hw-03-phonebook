@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/olegvoskovets/goit-react-hw-03-phonebook/static/css/main.c8034de6.css",
+    "main.js": "/olegvoskovets/goit-react-hw-03-phonebook/static/js/main.625dcc69.js",
+    "index.html": "/olegvoskovets/goit-react-hw-03-phonebook/index.html",
+    "main.c8034de6.css.map": "/olegvoskovets/goit-react-hw-03-phonebook/static/css/main.c8034de6.css.map",
+    "main.625dcc69.js.map": "/olegvoskovets/goit-react-hw-03-phonebook/static/js/main.625dcc69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8034de6.css",
+    "static/js/main.625dcc69.js"
+  ]
+}
