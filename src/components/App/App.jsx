@@ -13,13 +13,30 @@ export class App extends Component {
     filter: '',
   };
 
+  LOC_CONTACTS = 'local_contacts';
+
+  componentDidMount() {
+    const resultContacts = JSON.parse(localStorage.getItem(this.LOC_CONTACTS));
+    console.log('result = ', resultContacts);
+    if (resultContacts) {
+      this.setState({ contacts: resultContacts });
+    }
+  }
+  componentDidUpdate(predProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem(
+        this.LOC_CONTACTS,
+        JSON.stringify(this.state.contacts)
+      );
+    }
+  }
+
   checkName = name => {
     const result = this.state.contacts.find(contact => contact.name === name);
     return result ? true : false;
   };
 
   addContact = obj => {
-    // e.preventDefault();
     const { name, number } = obj;
 
     if (this.checkName(name)) {
